@@ -3,14 +3,15 @@ import time
 
 parameter_testing = [
 						['HENDRI SURYO PRAKOSO', 'INDONESIA', 'JAKARTA', 5105105105105100, 'April', '2022'],
-						['12312313123123123b12i3hb12312n', 'INDONESIA123123', 'JAKARTA34425', 'asdasd123123', '04', 'dua puluh dua']
+						['12312313123123123b12i3hb12312n', 'INDONESIA123123', 'JAKARTA34425', 'asdasd123123', '04', 'dua puluh dua'],
+						['@@#$', '$%#', '#$???', 'asd123>?', 'ASD?>?', '.""ASD?>']
 					]
 
 for param in parameter_testing:
 	try:
 		driver = webdriver.Chrome()
 		driver.get("https://www.demoblaze.com/cart.html")
-		time.sleep(3)
+		time.sleep(5)
 
 		driver.find_element_by_class_name("btn-success").click()
 		time.sleep(1)
